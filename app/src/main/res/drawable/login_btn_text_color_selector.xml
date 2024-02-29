@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:color="@color/login_main_background_color" android:state_enabled="false" />
+    <item android:color="@color/login_half_title_color" android:state_pressed="true" />
+    <item android:color="@color/login_title_color" />
+
+</selector>

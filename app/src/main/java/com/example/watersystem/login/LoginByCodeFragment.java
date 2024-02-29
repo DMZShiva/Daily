@@ -1,9 +1,13 @@
 package com.example.watersystem.login;
 
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -13,6 +17,8 @@ import com.example.watersystem.R;
 
 public class LoginByCodeFragment extends Fragment {
 
+    private EditText code;
+    private ImageView clean;
 
     @Nullable
     @Override
@@ -20,7 +26,58 @@ public class LoginByCodeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_login_by_code, container, false);
 
+        code = view.findViewById(R.id.login_by_code_code_number);
+        clean = view.findViewById(R.id.login_clean);
+
+        initEditText();
+
         return view;
+    }
+
+    private void initEditText() {
+        code.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                if (code.hasFocus()) {
+                    if (code.getText().toString().equals("")) {
+                        clean.setVisibility(View.GONE);
+                    } else {
+                        clean.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    clean.setVisibility(View.INVISIBLE);
+                }
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+
+            }
+        });
+
+        code.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View view, boolean b) {
+                if (!b) {
+                    clean.setVisibility(View.INVISIBLE);
+                } else {
+                    if (code.getText().toString().equals("")) {
+                        clean.setVisibility(View.GONE);
+                    } else {
+                        clean.setVisibility(View.VISIBLE);
+                    }
+                }
+            }
+        });
+
+        clean.setOnClickListener(v -> code.setText(""));
+
     }
 
 }

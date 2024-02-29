@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">WaterSystem</string>
+
+    <string name="login_by_psd_number_hint">请输入账号/手机号</string>
+    <string name="login_by_psd_psd">请输入密码</string>
+    <string name="login_by_code_number_hint">请输入手机号</string>
+    <string name="login_by_code_code">请输入验证码</string>
+    <string name="login_by_code_pull">获取验证码</string>
+
 </resources>
