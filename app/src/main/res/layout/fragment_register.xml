@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="20dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_marginTop="20dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/back"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_number"/>
+
+        <EditText
+            android:id="@+id/register_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/register_by_password_number_hint"
+            android:textSize="14sp"
+            android:paddingStart="15dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/register_clean_number"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/login_clean"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_password"/>
+
+        <EditText
+            android:id="@+id/register_password"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/register_by_password_password"
+            android:inputType="numberPassword"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="15dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/register_clean_password"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/login_clean"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/register_by_password_off"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/password_show_selector"
+            android:checked="false"
+            android:textOff="@null"
+            android:textOn="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_password"/>
+
+        <EditText
+            android:id="@+id/register_password_again"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/register_by_password_password_again"
+            android:inputType="numberPassword"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="15dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/register_clean_password_again"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/login_clean"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatToggleButton
+            android:id="@+id/register_by_password_off_again"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:background="@drawable/password_show_selector"
+            android:checked="false"
+            android:textOff="@null"
+            android:textOn="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:paddingStart="-5dp"
+            android:src="@drawable/register_phone"/>
+
+        <EditText
+            android:id="@+id/register_phone"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/register_by_code_number_hint"
+            android:textSize="14sp"
+            android:paddingStart="10dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/register_clean_phone"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/login_clean"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/register_by_code_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_by_code_pull"
+            android:textColor="@color/colorAccent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_code"/>
+
+        <EditText
+            android:id="@+id/register_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/register_by_code_code"
+            android:textSize="14sp"
+            android:paddingStart="15dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/register_clean_code"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/login_clean"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/register_button"
+        style="@style/login_btn_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/register_btn"/>
+
+</LinearLayout>

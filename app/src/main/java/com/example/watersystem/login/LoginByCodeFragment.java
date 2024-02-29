@@ -2,12 +2,15 @@ package com.example.watersystem.login;
 
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +21,9 @@ import com.example.watersystem.R;
 public class LoginByCodeFragment extends Fragment {
 
     private EditText code;
-    private ImageView clean;
+    private EditText phoneNumber;
+    private ImageView cleanCode;
+    private TextView sendCode;
 
     @Nullable
     @Override
@@ -27,9 +32,12 @@ public class LoginByCodeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_login_by_code, container, false);
 
         code = view.findViewById(R.id.login_by_code_code_number);
-        clean = view.findViewById(R.id.login_clean);
+        phoneNumber = view.findViewById(R.id.login_by_password_number_edit);
+        cleanCode = view.findViewById(R.id.login_clean);
+        sendCode = view.findViewById(R.id.register_by_code_send);
 
         initEditText();
+        initCodeSend();
 
         return view;
     }
@@ -46,12 +54,12 @@ public class LoginByCodeFragment extends Fragment {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 if (code.hasFocus()) {
                     if (code.getText().toString().equals("")) {
-                        clean.setVisibility(View.GONE);
+                        cleanCode.setVisibility(View.GONE);
                     } else {
-                        clean.setVisibility(View.VISIBLE);
+                        cleanCode.setVisibility(View.VISIBLE);
                     }
                 } else {
-                    clean.setVisibility(View.INVISIBLE);
+                    cleanCode.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -65,19 +73,35 @@ public class LoginByCodeFragment extends Fragment {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if (!b) {
-                    clean.setVisibility(View.INVISIBLE);
+                    cleanCode.setVisibility(View.INVISIBLE);
                 } else {
                     if (code.getText().toString().equals("")) {
-                        clean.setVisibility(View.GONE);
+                        cleanCode.setVisibility(View.GONE);
                     } else {
-                        clean.setVisibility(View.VISIBLE);
+                        cleanCode.setVisibility(View.VISIBLE);
                     }
                 }
             }
         });
 
-        clean.setOnClickListener(v -> code.setText(""));
+        cleanCode.setOnClickListener(v -> code.setText(""));
 
+    }
+
+    private void initCodeSend() {
+        sendCode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (TextUtils.isEmpty(phoneNumber.getText())){
+                    Toast.makeText(getContext(), R.string.register_toast_phone_null, Toast.LENGTH_SHORT).show();
+                } else if (phoneNumber.getText().length() != 11 ) {
+                    Toast.makeText(getContext(), R.string.register_toast_phone, Toast.LENGTH_SHORT).show();
+                } else {
+                    // 发送验证码
+                }
+            }
+        });
     }
 
 }

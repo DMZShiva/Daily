@@ -18,37 +18,37 @@ import androidx.fragment.app.Fragment;
 import com.example.watersystem.R;
 
 
-public class LoginByPsdFragment extends Fragment {
+public class LoginByPasswordFragment extends Fragment {
 
-    private ToggleButton psd_off;
-    private EditText psd;
-    private ImageView clean;
+    private ToggleButton showPassword;
+    private EditText password;
+    private ImageView cleanPassword;
     
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.fragment_login_by_psd, container, false);
+        View view = inflater.inflate(R.layout.fragment_login_by_password, container, false);
 
-        psd = view.findViewById(R.id.login_by_psd_psd_number);
-        psd_off = view.findViewById(R.id.login_by_psd_off);
-        clean = view.findViewById(R.id.login_clean);
+        password = view.findViewById(R.id.login_by_password_password_number);
+        showPassword = view.findViewById(R.id.login_by_password_off);
+        cleanPassword = view.findViewById(R.id.login_clean);
 
-        initPsd();
+        initPassword();
         initEditText();
 
         return view;
     }
 
-    private void initPsd() {
+    private void initPassword() {
 
-        psd_off.setOnCheckedChangeListener((compoundButton, isChecked) -> psd.setInputType(
+        showPassword.setOnCheckedChangeListener((compoundButton, isChecked) -> password.setInputType(
                 isChecked ? (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD)
                         : (InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD)));
     }
 
     private void initEditText() {
-        psd.addTextChangedListener(new TextWatcher() {
+        password.addTextChangedListener(new TextWatcher() {
 
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -57,14 +57,14 @@ public class LoginByPsdFragment extends Fragment {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                if (psd.hasFocus()) {
-                    if (psd.getText().toString().equals("")) {
-                        clean.setVisibility(View.GONE);
+                if (password.hasFocus()) {
+                    if (password.getText().toString().equals("")) {
+                        cleanPassword.setVisibility(View.GONE);
                     } else {
-                        clean.setVisibility(View.VISIBLE);
+                        cleanPassword.setVisibility(View.VISIBLE);
                     }
                 } else {
-                    clean.setVisibility(View.INVISIBLE);
+                    cleanPassword.setVisibility(View.INVISIBLE);
                 }
             }
 
@@ -74,22 +74,22 @@ public class LoginByPsdFragment extends Fragment {
             }
         });
 
-        psd.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        password.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
                 if (!b) {
-                    clean.setVisibility(View.INVISIBLE);
+                    cleanPassword.setVisibility(View.INVISIBLE);
                 } else {
-                    if (psd.getText().toString().equals("")) {
-                        clean.setVisibility(View.GONE);
+                    if (password.getText().toString().equals("")) {
+                        cleanPassword.setVisibility(View.GONE);
                     } else {
-                        clean.setVisibility(View.VISIBLE);
+                        cleanPassword.setVisibility(View.VISIBLE);
                     }
                 }
             }
         });
 
-        clean.setOnClickListener(v -> psd.setText(""));
+        cleanPassword.setOnClickListener(v -> password.setText(""));
 
     }
 }

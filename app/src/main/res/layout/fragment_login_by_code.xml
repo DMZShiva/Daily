@@ -19,7 +19,7 @@
             android:src="@drawable/login_number"/>
 
         <EditText
-            android:id="@+id/login_by_psd_number_edit"
+            android:id="@+id/login_by_password_number_edit"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="@string/login_by_code_number_hint"
@@ -63,11 +63,11 @@
             android:visibility="gone"/>
 
         <TextView
-            android:id="@+id/login_by_code_pull"
+            android:id="@+id/register_by_code_send"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/login_by_code_pull"
-            android:textColor="#FF9800"/>
+            android:textColor="@color/colorAccent"/>
     </LinearLayout>
 
 </LinearLayout>

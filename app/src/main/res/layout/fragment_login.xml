@@ -18,12 +18,13 @@
         android:layout_marginTop="25dp"/>
 
     <TextView
+        android:id="@+id/login_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_gravity="end"
-        android:text="立即注册"
-        android:textColor="#1296db"/>
+        android:text="@string/login_btn"
+        android:textColor="@color/purple_200"/>
 
     <Button
         android:id="@+id/login_button"
@@ -31,6 +32,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="立即登陆"/>
+        android:text="@string/login_register_btn"/>
 
 </LinearLayout>
