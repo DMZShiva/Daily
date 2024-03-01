@@ -37,22 +37,19 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
-    val nav_version = "2.5.3"
-
+    // Navigation依赖项
     // Java language implementation
-    implementation("androidx.navigation:navigation-fragment:$nav_version")
-    implementation("androidx.navigation:navigation-ui:$nav_version")
-
+    implementation("androidx.navigation:navigation-fragment:2.5.3")
+    implementation("androidx.navigation:navigation-ui:2.5.3")
     // Kotlin
-    implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
-    implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
-
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
     // Feature module Support
-    implementation("androidx.navigation:navigation-dynamic-features-fragment:$nav_version")
-
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.5.3")
     // Testing Navigation
-    androidTestImplementation("androidx.navigation:navigation-testing:$nav_version")
-
+    androidTestImplementation("androidx.navigation:navigation-testing:2.5.3")
     // Jetpack Compose Integration
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+
+
 }

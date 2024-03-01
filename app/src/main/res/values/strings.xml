@@ -37,6 +37,12 @@
 
     <!--    登陆界面-->
     <string name="home">主页</string>
+    <string name="home_test">设备测试</string>
+    <string name="home_setting">设备设置</string>
+    <string name="home_analysis">场景选择</string>
+    <string name="home_phone">拨号设置</string>
+    <string name="home_about">联系我们</string>
+
 
     <!--    登陆界面-->
     <string name="control">控制</string>
