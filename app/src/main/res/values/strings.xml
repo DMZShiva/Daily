@@ -35,6 +35,20 @@
     <string name="register_toast_code_null">请输入验证码</string>
 
 
+    <!--    登陆界面-->
+    <string name="home">主页</string>
+
+    <!--    登陆界面-->
+    <string name="control">控制</string>
+
+    <!--    登陆界面-->
+    <string name="data">数据</string>
+
+    <!--    登陆界面-->
+    <string name="map">地图</string>
+
+    <!--    登陆界面-->
+    <string name="personal">个人</string>
 
 
 

@@ -1,5 +1,6 @@
 package com.example.watersystem.login;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -16,6 +17,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import com.example.watersystem.BusinessActivity;
 import com.example.watersystem.R;
 import com.google.android.material.tabs.TabLayout;
 
@@ -34,7 +36,7 @@ public class LoginFragment extends Fragment {
     private PagerAdapter pagerAdapter;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private Button LoginButton;
+    private Button loginButton;
     private TextView registerTextView;
 
     @Nullable
@@ -45,7 +47,7 @@ public class LoginFragment extends Fragment {
 
         viewPager = view.findViewById(R.id.login_view_pager);
         tabLayout = view.findViewById(R.id.login_tab_layout);
-        LoginButton = view.findViewById(R.id.login_button);
+        loginButton = view.findViewById(R.id.login_button);
         registerTextView = view.findViewById(R.id.login_register);
 
         initTableLayout();
@@ -123,7 +125,14 @@ public class LoginFragment extends Fragment {
     }
 
     private void initLogin() {
-
+        loginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), BusinessActivity.class);
+                startActivity(intent);
+                getActivity().finish();
+            }
+        });
     }
 
     private void initRegister() {
