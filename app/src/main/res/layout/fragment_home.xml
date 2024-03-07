@@ -138,15 +138,30 @@
 
     </LinearLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
         android:paddingVertical="10dp"
-        android:background="@drawable/home_stroke_background"
-        android:gravity="center"
-        android:orientation="horizontal"/>
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/home_stroke_background">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/home_warn"
+            android:gravity="center_horizontal"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center" />
+
+
+    </LinearLayout>
+
+
 
 </LinearLayout>

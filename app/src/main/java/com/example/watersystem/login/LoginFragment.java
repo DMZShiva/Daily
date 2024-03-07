@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,7 +35,7 @@ public class LoginFragment extends Fragment {
     private PagerAdapter pagerAdapter;
     private ViewPager viewPager;
     private TabLayout tabLayout;
-    private Button loginButton;
+    private TextView login;
     private TextView registerTextView;
 
     @Nullable
@@ -47,7 +46,7 @@ public class LoginFragment extends Fragment {
 
         viewPager = view.findViewById(R.id.login_view_pager);
         tabLayout = view.findViewById(R.id.login_tab_layout);
-        loginButton = view.findViewById(R.id.login_button);
+        login = view.findViewById(R.id.login);
         registerTextView = view.findViewById(R.id.login_register);
 
         initTableLayout();
@@ -125,7 +124,7 @@ public class LoginFragment extends Fragment {
     }
 
     private void initLogin() {
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), BusinessActivity.class);

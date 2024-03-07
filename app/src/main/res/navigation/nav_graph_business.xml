@@ -6,6 +6,16 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.watersystem.login.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.watersystem.register.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.watersystem.home.HomeFragment"
         tools:layout="@layout/fragment_home"
@@ -34,5 +44,30 @@
         android:name="com.example.watersystem.personal.PersonalFragment"
         tools:layout="@layout/fragment_personal"
         android:label="@string/personal" />
+    <fragment
+        android:id="@+id/routeFragment"
+        android:name="com.example.watersystem.map.RouteFragment"
+        tools:layout="@layout/fragment_map_route"
+        android:label="@string/map_route" />
+    <fragment
+        android:id="@+id/routeDetailFragment"
+        android:name="com.example.watersystem.map.RouteDetailFragment"
+        tools:layout="@layout/fragment_map_route_detail"
+        android:label="@string/map_route_detail" />
+    <fragment
+        android:id="@+id/homeTestFragment"
+        android:name="com.example.watersystem.home.test.HomeTestFragment"
+        tools:layout="@layout/fragment_home_test"
+        android:label="@string/home_test" />
+    <fragment
+        android:id="@+id/homeSettingFragment"
+        android:name="com.example.watersystem.home.setting.HomeSettingFragment"
+        tools:layout="@layout/fragment_home_setting"
+        android:label="@string/home_setting" />
+    <fragment
+        android:id="@+id/homeAnalysisFragment"
+        android:name="com.example.watersystem.home.analysis.HomeAnalysisFragment"
+        tools:layout="@layout/fragment_home_analysis"
+        android:label="@string/home_analysis" />
 
 </navigation>

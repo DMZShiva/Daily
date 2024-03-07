@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_marginTop="9dp"
+    android:background="@drawable/personal_adapter_personal_center_item_background"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    >
+
+    <TextView
+        android:id="@+id/personal_item_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:text=""
+        android:textColor="@color/personal_text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/personal_version_new"
+        android:layout_width="38dp"
+        android:layout_height="18dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:src="@drawable/personal_version_new"
+        android:layout_marginStart="5dp"
+        android:visibility="gone"/>
+
+
+    <TextView
+        android:id="@+id/personal_item_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:gravity="end"
+        android:text="1"
+        android:textColor="@color/personal_text_color"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/personal_item_phone"
+        android:maxWidth="24dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="3dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/login_psd_off"
+        android:visibility="gone"/>
+
+    <ImageView
+        android:id="@+id/personal_item_arrow"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/map_arrow_right_blue"
+        android:visibility="gone"/>
+
+</LinearLayout>
+

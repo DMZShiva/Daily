@@ -26,12 +26,16 @@
         android:text="@string/login_btn"
         android:textColor="@color/purple_200"/>
 
-    <Button
-        android:id="@+id/login_button"
-        style="@style/login_btn_color"
+    <TextView
+        android:id="@+id/login"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginTop="50dp"
+        android:background="@drawable/personal_logout_background"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:gravity="center"
         android:text="@string/login_register_btn"/>
+
 
 </LinearLayout>

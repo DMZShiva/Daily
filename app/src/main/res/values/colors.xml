@@ -25,5 +25,15 @@
     <color name="login_main_background_color">#FFFFFF</color>
     <color name="login_title_color">#222222</color>
 
+    <color name="personal_text_color">#FF666666</color>
+
+    <color name="personal_logout_color">#FFFFD100</color>
+    <color name="personal_logout_text_color">#FFFFD100</color>
+
+    <color name="dialog_home_phone_stroke_color">#00BCD4</color>
+    <color name="dialog_home_phone_positive_color">#FF0000</color>
+    <color name="dialog_home_phone_negative_color">#FF000000</color>
+
+
 
 </resources>

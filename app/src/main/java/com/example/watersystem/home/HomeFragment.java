@@ -4,20 +4,30 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.fragment.NavHostFragment;
 
 import com.example.watersystem.R;
+import com.example.watersystem.home.dialog.HomeAboutDialogFragment;
+import com.example.watersystem.home.dialog.HomePhoneDialogFragment;
 import com.example.watersystem.view.BannerViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements HomePhoneDialogFragment.EditTextDialogListener {
 
     private BannerViewPager bannerViewPager;
+
+    private LinearLayout homeTest;
+    private LinearLayout homeSetting;
+    private LinearLayout homeAnalysis;
+    private LinearLayout homePhone;
+    private LinearLayout homeAbout;
 
     @Nullable
     @Override
@@ -25,8 +35,14 @@ public class HomeFragment extends Fragment {
         View view= inflater.inflate(R.layout.fragment_home, container, false);
 
         bannerViewPager = view.findViewById(R.id.home_banner);
+        homeTest = view.findViewById(R.id.home_test);
+        homeSetting = view.findViewById(R.id.home_setting);
+        homeAnalysis = view.findViewById(R.id.home_analysis);
+        homePhone = view.findViewById(R.id.home_phone);
+        homeAbout = view.findViewById(R.id.home_about);
 
         initBannerViewPager();
+        initLinearListener();
 
         return view;
     }
@@ -53,4 +69,47 @@ public class HomeFragment extends Fragment {
         bannerViewPager.setTitles(titles);
     }
 
+    private void initLinearListener() {
+        homeTest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.homeTestFragment);
+            }
+        });
+
+        homeSetting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.homeSettingFragment);
+            }
+        });
+
+        homeAnalysis.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(HomeFragment.this).navigate(R.id.homeAnalysisFragment);
+            }
+        });
+
+        homePhone.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomePhoneDialogFragment dialogFragment = new HomePhoneDialogFragment();
+                dialogFragment.show(getChildFragmentManager(), "dialog");
+            }
+        });
+
+        homeAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                HomeAboutDialogFragment dialog = new HomeAboutDialogFragment();
+                dialog.show(getChildFragmentManager(), "confirm_dialog");
+            }
+        });
+    }
+
+    @Override
+    public void onDialogPositiveClick(String text) {
+
+    }
 }

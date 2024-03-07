@@ -8,9 +8,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.navigation.ui.NavigationUI;
 
+import com.example.watersystem.home.dialog.HomePhoneDialogFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class BusinessActivity extends AppCompatActivity {
+public class BusinessActivity extends AppCompatActivity implements HomePhoneDialogFragment.EditTextDialogListener {
 
     private NavController navController;
 
@@ -31,6 +32,11 @@ public class BusinessActivity extends AppCompatActivity {
         bottomNavigationView.setItemIconTintList(null);
 
         NavigationUI.setupWithNavController(bottomNavigationView, navController);
+
+    }
+
+    @Override
+    public void onDialogPositiveClick(String text) {
 
     }
 }
