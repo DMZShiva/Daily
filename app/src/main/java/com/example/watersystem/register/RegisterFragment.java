@@ -10,7 +10,6 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,7 +25,7 @@ import com.example.watersystem.R;
 
 public class RegisterFragment extends Fragment {
 
-    private Button registerButton;
+    private TextView register;
     private ImageView back;
     private TextView sendCode;
     private EditText registerNumber;
@@ -49,7 +48,7 @@ public class RegisterFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
 
-        registerButton = view.findViewById(R.id.register_button);
+        register = view.findViewById(R.id.register);
         back = view.findViewById(R.id.back);
         sendCode = view.findViewById(R.id.register_by_code_send);
         registerNumber= view.findViewById(R.id.register_number);
@@ -76,7 +75,7 @@ public class RegisterFragment extends Fragment {
     }
 
     private void initRegister() {
-        registerButton.setOnClickListener(new View.OnClickListener() {
+        register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 initRegisterToast();
