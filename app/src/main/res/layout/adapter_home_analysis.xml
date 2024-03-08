@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_stroke_background"
+    android:layout_marginBottom="10dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/home_analysis_img"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:src="@drawable/home_analysis_water"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/home_analysis_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_test_analysis_title"/>
+
+        <TextView
+            android:id="@+id/home_analysis_tds"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_test_analysis_tds"/>
+
+        <TextView
+            android:id="@+id/home_analysis_ph"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:text="@string/home_test_analysis_ph"/>
+
+        <TextView
+            android:id="@+id/home_analysis_temp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_test_analysis_tem"/>
+
+        <TextView
+            android:id="@+id/home_analysis_tu"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/home_test_analysis_tu"/>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/home_analysis_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FFBD00</color>
+    <color name="fragment_bg_color">#F4F4F4</color>
+    <color name="permission_bg_color">#D7E5FE</color>
+    <color name="order_info_color">#222222</color>
+    <color name="search_info_color">#FFFF6000</color>
+    <color name="shopping_cart_title_color">#FFFAFAFA</color>
+
+    <color name="login_half_brand_color">#80FFD100</color>
+    <color name="login_half_title_color">#80222222</color>
+    <color name="login_brand_color">#FFD100</color>
+    <color name="login_disable_text_color">#CCCCCC</color>
+
+    <color name="login_main_background_color">#FFFFFF</color>
+    <color name="login_title_color">#222222</color>
+
+    <color name="personal_text_color">#FF666666</color>
+
+    <color name="personal_logout_color">#FFFFD100</color>
+    <color name="personal_logout_text_color">#FFFFD100</color>
+
+    <color name="dialog_home_phone_stroke_color">#00BCD4</color>
+    <color name="dialog_home_phone_positive_color">#FF0000</color>
+    <color name="dialog_home_phone_negative_color">#FF000000</color>
+
+
+
+</resources>

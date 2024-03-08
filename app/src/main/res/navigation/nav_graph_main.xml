@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main.xml"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.watersystem.login.LoginFragment"
+        android:label="@string/login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.watersystem.register.RegisterFragment"
+        android:label="@string/register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.watersystem.home.HomeFragment"
+        android:label="@string/home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.watersystem.map.MapFragment"
+        android:label="@string/map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/dataFragment"
+        android:name="com.example.watersystem.data.DataFragment"
+        android:label="@string/data"
+        tools:layout="@layout/fragment_data" />
+    <fragment
+        android:id="@+id/controlFragment"
+        android:name="com.example.watersystem.control.ControlFragment"
+        android:label="@string/control"
+        tools:layout="@layout/fragment_control" />
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.example.watersystem.personal.PersonalFragment"
+        android:label="@string/personal"
+        tools:layout="@layout/fragment_personal" />
+    <fragment
+        android:id="@+id/routeFragment"
+        android:name="com.example.watersystem.map.RouteFragment"
+        android:label="路线规划"
+        tools:layout="@layout/fragment_map_route" />
+    <fragment
+        android:id="@+id/routeDetailFragment"
+        android:name="com.example.watersystem.map.RouteDetailFragment"
+        android:label="路线详情"
+        tools:layout="@layout/fragment_map_route_detail" />
+</navigation>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_by_code"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/login_by_code_number"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_number"/>
+
+        <EditText
+            android:id="@+id/login_by_password_number_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/login_by_code_number_hint"
+            android:textSize="14sp"
+            android:paddingStart="15dp"
+            android:background="@null"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/login_by_code_code"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/underline_background"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/login_code"/>
+
+        <EditText
+            android:id="@+id/login_by_code_code_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="@string/login_by_code_code"
+            android:textSize="14sp"
+            android:layout_marginEnd="10dp"
+            android:paddingStart="15dp"
+            android:background="@null"/>
+
+        <ImageView
+            android:id="@+id/login_clean"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/login_clean"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/register_by_code_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/login_by_code_pull"
+            android:textColor="@color/colorAccent"/>
+    </LinearLayout>
+
+</LinearLayout>
