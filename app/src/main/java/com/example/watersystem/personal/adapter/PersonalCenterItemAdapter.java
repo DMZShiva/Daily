@@ -1,10 +1,13 @@
 package com.example.watersystem.personal.adapter;
 
+import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,6 +17,7 @@ import com.example.watersystem.personal.PersonalFragment;
 import com.example.watersystem.personal.type.PersonalCenterItemType;
 import com.example.watersystem.personal.type.PersonalNameType;
 import com.example.watersystem.personal.type.PersonalNewVersionType;
+import com.example.watersystem.personal.type.PersonalPasswordType;
 import com.example.watersystem.personal.type.PersonalPhoneNumberType;
 
 import java.util.Collections;
@@ -45,6 +49,24 @@ public class PersonalCenterItemAdapter extends RecyclerView.Adapter<PersonalCent
     @Override
     public void onBindViewHolder(@NonNull PersonalCenterItemAdapter.PersonalCenterItemHolder holder, int position) {
         PersonalCenterItemType personalCenterItemType = data.get(position);
+
+        // 设置密码眼睛icon可见性
+        if (personalCenterItemType.getItemType() == PersonalCenterItemType.PERSONAL_CENTER_ITEM_PASSWORD) {
+            PersonalPasswordType personalPasswordType = (PersonalPasswordType) personalCenterItemType;
+            holder.itemPassword.setVisibility(View.VISIBLE);
+            holder.itemPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                    if (b) {
+                        personalPasswordType.setPlain(false);
+                        holder.itemPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    } else {
+                        personalPasswordType.setPlain(true);
+                        holder.itemPassword.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+                    }
+                }
+            });
+        }
 
         // 设置手机号眼睛icon可见性
         if (personalCenterItemType.getItemType() == PersonalCenterItemType.PERSONAL_CENTER_ITEM_PHONE) {
@@ -120,6 +142,7 @@ public class PersonalCenterItemAdapter extends RecyclerView.Adapter<PersonalCent
         private ImageView versionNew;
         private ImageView itemPhoneView;
         private ImageView itemArrowView;
+        private ToggleButton itemPassword;
 
         public PersonalCenterItemHolder(@NonNull View itemView) {
             super(itemView);
@@ -129,6 +152,7 @@ public class PersonalCenterItemAdapter extends RecyclerView.Adapter<PersonalCent
             versionNew = itemView.findViewById(R.id.personal_version_new);
             itemPhoneView = itemView.findViewById(R.id.personal_item_phone);
             itemArrowView = itemView.findViewById(R.id.personal_item_arrow);
+            itemPassword = itemView.findViewById(R.id.personal_item_password);
 
         }
     }

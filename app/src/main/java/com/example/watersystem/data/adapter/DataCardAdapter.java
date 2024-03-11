@@ -1,5 +1,7 @@
 package com.example.watersystem.data.adapter;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -47,6 +49,20 @@ public class DataCardAdapter extends RecyclerView.Adapter<DataCardAdapter.DataCa
         holder.data_ph_title.setText("PH:");
         holder.data_tem_title.setText("TEM:");
         holder.data_tu_title.setText("TU:");
+
+        if (holder.tds_progressBar.getProgress() == 100) {
+            holder.tds_progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+        }
+        if (holder.ph_progressBar.getProgress() == 100) {
+            holder.ph_progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+        }
+        if (holder.tem_progressBar.getProgress() == 100) {
+            holder.tem_progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+        }
+        if (holder.tu_progressBar.getProgress() == 100) {
+            holder.tu_progressBar.setProgressTintList(ColorStateList.valueOf(Color.RED));
+        }
+
     }
 
     @Override

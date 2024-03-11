@@ -49,6 +49,18 @@
         android:src="@drawable/login_psd_off"
         android:visibility="gone"/>
 
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/personal_item_password"
+        android:maxWidth="24dp"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="3dp"
+        android:layout_gravity="center_vertical"
+        android:background="@drawable/password_show_selector"
+        android:textOff="@null"
+        android:textOn="@null"
+        android:visibility="gone"/>
+
     <ImageView
         android:id="@+id/personal_item_arrow"
         android:layout_width="24dp"

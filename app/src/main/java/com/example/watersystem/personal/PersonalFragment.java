@@ -21,6 +21,7 @@ import com.example.watersystem.personal.dialog.PersonalLogoutDialog;
 import com.example.watersystem.personal.type.PersonalCenterItemType;
 import com.example.watersystem.personal.type.PersonalNameType;
 import com.example.watersystem.personal.type.PersonalNewVersionType;
+import com.example.watersystem.personal.type.PersonalPasswordType;
 import com.example.watersystem.personal.type.PersonalPhoneNumberType;
 
 import org.w3c.dom.Text;
@@ -101,7 +102,7 @@ public class PersonalFragment extends Fragment {
 
         dataList.add(new PersonalNameType(getString(R.string.personal_name), "Shiva"));
         dataList.add(new PersonalNameType(getString(R.string.personal_id), "1102381023"));
-        dataList.add(new PersonalNameType(getString(R.string.personal_password), "1.0.0"));
+        dataList.add(new PersonalPasswordType(getString(R.string.personal_password), "123123123"));
         dataList.add(new PersonalPhoneNumberType(getString(R.string.personal_phone), sb.toString()));
         dataList.add(new PersonalNewVersionType(getString(R.string.personal_version), "1.0.0", true));
     }
